@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Afomix ✨</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; min-height:100vh; color:#fff7ee; overflow-x:hidden;
+  font-family:Montserrat,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(255,188,124,.15), transparent 25%),
+    radial-gradient(circle at 85% 25%, rgba(224,146,183,.13), transparent 28%),
+    linear-gradient(135deg,#09080d 0%,#171019 48%,#0b0a0f 100%);
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;
+  background-image:radial-gradient(#f7d79d 1px,transparent 1px);
+  background-size:42px 42px;
+}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:55px 20px;position:relative}
+.hero-inner{max-width:900px;position:relative;z-index:2}
+.kicker{letter-spacing:5px;text-transform:uppercase;font-size:12px;color:#e8c68e;margin-bottom:20px}
+.line{width:130px;height:1px;background:#c99a50;margin:0 auto 28px;position:relative}
+.line:after{content:"♥";position:absolute;left:50%;top:-12px;transform:translateX(-50%);background:#111;padding:0 10px;color:#e5b86e}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(64px,12vw,130px);line-height:.8;margin:0;color:#f1ca86;font-weight:600;text-shadow:0 0 35px rgba(241,202,134,.18)}
+.name{font-family:"Cormorant Garamond",serif;font-size:clamp(55px,10vw,105px);font-weight:600;color:#ef9eaa;margin:18px 0 6px}
+.nickname{font-family:"Cormorant Garamond",serif;font-size:30px;color:#e7c5c9}
+.subtitle{max-width:610px;margin:32px auto;color:#e8ddd5;line-height:1.8;font-size:15px}
+.surprise{
+  border:1px solid #e3b86d;background:linear-gradient(135deg,#a74761,#7b3049);
+  color:white;border-radius:50px;padding:16px 30px;font-size:15px;cursor:pointer;
+  box-shadow:0 0 28px rgba(218,154,105,.22);transition:.3s
+}
+.surprise:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(218,154,105,.3)}
+.decor{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.balloon{position:absolute;width:52px;height:68px;border-radius:50% 50% 48% 48%;opacity:.55;filter:blur(.1px);animation:float 7s ease-in-out infinite}
+.balloon:after{content:"";position:absolute;bottom:-45px;left:50%;width:1px;height:48px;background:#c99f73}
+.b1{left:7%;top:15%;background:#c98591;animation-delay:-2s}.b2{right:8%;top:20%;background:#d0a25f;animation-delay:-4s}.b3{left:12%;bottom:13%;background:#eee0cf;animation-delay:-1s}.b4{right:12%;bottom:10%;background:#a86d7e;animation-delay:-5s}
+@keyframes float{50%{transform:translateY(-22px) rotate(4deg)}}
+
+.confetti{position:absolute;width:7px;height:12px;background:#e5b86e;opacity:.75;animation:fall linear infinite}
+.c1{left:18%;top:-10%;animation-duration:8s}.c2{left:37%;top:-20%;animation-duration:6s}.c3{left:68%;top:-15%;animation-duration:9s}.c4{left:82%;top:-25%;animation-duration:7s}
+@keyframes fall{to{transform:translateY(120vh) rotate(540deg)}}
+
+.card-wrap{padding:0 18px 80px;position:relative;z-index:3}
+.card{
+  max-width:950px;margin:auto;background:linear-gradient(145deg,#f8ead5,#ead2b7);
+  color:#4b302a;border-radius:26px;padding:55px clamp(25px,7vw,80px);
+  box-shadow:0 20px 70px rgba(0,0,0,.4);position:relative;overflow:hidden
+}
+.card:before{content:"";position:absolute;inset:12px;border:1px solid rgba(126,75,53,.22);border-radius:19px;pointer-events:none}
+.card h2{font-family:"Cormorant Garamond",serif;text-align:center;font-size:46px;margin:0 0 30px;color:#713d43}
+.card h2:before,.card h2:after{content:"♡";color:#a85a69;margin:0 15px}
+.message{font-family:"Cormorant Garamond",serif;font-size:23px;line-height:1.55;position:relative;z-index:1}
+.message p{margin:0 0 20px}
+.signature{text-align:right;font-family:"Cormorant Garamond",serif;font-size:27px;color:#a44761;margin-top:25px}
+.wishes{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.wish{border:1px solid rgba(113,61,67,.25);padding:10px 15px;border-radius:30px;font-size:12px}
+footer{text-align:center;color:#c9aa91;padding:20px 20px 45px;font-family:"Cormorant Garamond",serif;font-size:19px}
+
+.reveal{display:none;animation:appear .8s ease}
+.reveal.show{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+.cake{width:190px;height:125px;margin:45px auto 0;position:relative}
+.cake-base{position:absolute;bottom:0;width:190px;height:80px;background:linear-gradient(#f5e4d0,#d7ad9d);border-radius:15px 15px 24px 24px;box-shadow:0 8px 20px #0005}
+.cake-base:before{content:"";position:absolute;top:0;left:0;right:0;height:28px;background:#fff0e8;border-radius:15px}
+.candle{position:absolute;bottom:75px;width:10px;height:45px;background:#d59c64;border-radius:4px}
+.candle:nth-child(1){left:55px}.candle:nth-child(2){left:90px}.candle:nth-child(3){left:125px}
+.flame{position:absolute;width:13px;height:20px;border-radius:50% 50% 50% 50%;background:#ffd76e;top:-18px;left:-1px;box-shadow:0 0 18px #ffd76e;animation:flicker .55s infinite alternate}
+@keyframes flicker{to{transform:scale(.8) translateY(2px);opacity:.8}}
+.playing{background:#d09b59!important}
+
+@media(max-width:600px){
+  .kicker{letter-spacing:3px}.subtitle{font-size:14px}.card{padding:45px 22px}.card h2{font-size:36px}
+  .card h2:before,.card h2:after{margin:0 5px}.message{font-size:20px}.balloon{transform:scale(.75)}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="decor">
+    <span class="balloon b1"></span><span class="balloon b2"></span><span class="balloon b3"></span><span class="balloon b4"></span>
+    <span class="confetti c1"></span><span class="confetti c2"></span><span class="confetti c3"></span><span class="confetti c4"></span>
+  </div>
+  <div class="hero-inner">
+    <div class="kicker">A special day for a special sister</div>
+    <div class="line"></div>
+    <h1>Happy Birthday</h1>
+    <div class="name">Afomix ♡</div>
+    <div class="nickname">(Merix)</div>
+    <p class="subtitle">Another year of your beautiful existence is a blessing to everyone who knows you. You deserve all the happiness in the world. ✨</p>
+    <button class="surprise" id="surpriseBtn">♡ Click for your surprise →</button>
+    <div class="cake" aria-label="birthday cake">
+      <div class="candle"><span class="flame"></span></div>
+      <div class="candle"><span class="flame"></span></div>
+      <div class="candle"><span class="flame"></span></div>
+      <div class="cake-base"></div>
+    </div>
+  </div>
+</section>
+
+<section class="card-wrap">
+  <div class="card reveal" id="messageCard">
+    <h2>Here's Your Special Message</h2>
+    <div class="message">
+      <p><strong>Happy Birthday, my dearest Afomix / Merix! 💕</strong></p>
+      <p>Today is all about you — the amazing, kind, strong, and beautiful person you are. You bring so much joy, love, and light into my life, and I’m so grateful to have you as my sister.</p>
+      <p>May this new year bring you closer to all your dreams, fill your heart with peace, surround you with people who truly love you, and give you countless reasons to smile.</p>
+      <p>Never forget how special you are — because you are one of a kind. I hope you have the happiest birthday, my love! ♡</p>
+      <div class="signature">Always your sister,<br><strong>Nuhamin ♡</strong></div>
+    </div>
+    <div class="wishes">
+      <span class="wish">✦ More blessings</span>
+      <span class="wish">♡ More happiness</span>
+      <span class="wish">✿ More success</span>
+      <span class="wish">☼ More adventures</span>
+      <span class="wish">♕ More beautiful memories</span>
+    </div>
+  </div>
+</section>
+
+<footer>Made with love for Afomix • Happy Birthday! 🎂✨</footer>
+
+<script>
+const btn=document.getElementById('surpriseBtn');
+const card=document.getElementById('messageCard');
+btn.addEventListener('click',()=>{
+  card.classList.add('show');
+  btn.textContent='♡ Your surprise is here!';
+  card.scrollIntoView({behavior:'smooth',block:'center'});
+  celebrate();
+});
+
+function celebrate(){
+  for(let i=0;i<45;i++){
+    const x=document.createElement('span');
+    x.style.position='fixed'; x.style.left=Math.random()*100+'vw'; x.style.top='-15px';
+    x.style.width='7px'; x.style.height='12px'; x.style.background=['#e5b86e','#ef9eaa','#f8ead5','#d59c64'][Math.floor(Math.random()*4)];
+    x.style.zIndex='9999'; x.style.pointerEvents='none';
+    x.style.transform='rotate('+Math.random()*360+'deg)';
+    x.style.transition='transform 2.8s linear, top 2.8s linear, opacity 2.8s';
+    document.body.appendChild(x);
+    requestAnimationFrame(()=>{x.style.top='105vh';x.style.transform+=' rotate(720deg)';x.style.opacity='0'});
+    setTimeout(()=>x.remove(),3000);
+  }
+}
+</script>
+</body>
+</html>
